@@ -1,5 +1,7 @@
 # Machine Learning with SciPy
 
+[![Known Vulnerabilities](http://snyk.io/test/github/mramshaw/ML_with_SciPy/badge.svg?style=plastic&targetFile=requirements.txt)](http://snyk.io/test/github/mramshaw/ML_with_SciPy?style=plastic&targetFile=requirements.txt)
+
 A quick end-to-end exploration of a simple Machine Learning project.
 
 ## Motivation
@@ -90,8 +92,9 @@ read_csv
 
 ## To Do
 
+- [ ] Add __Snyk.io__ vulnerability scanning
 - [ ] Verify code conforms to `pylint`, `pycodestyle` and `pydocstyle`
-- [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/)
+- [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/) / [Dora](http://github.com/NathanEpstein/Dora)
 
 ## Credits
 
