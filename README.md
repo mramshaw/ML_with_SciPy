@@ -25,6 +25,26 @@ The sequence of events is as follows:
 I had previously done most of these things - with the exception of
 __5__ (evaluating different algorithms), which was thus of particular interest.
 
+## Table of Contents
+
+The contents are as follows:
+
+* [Prerequisites](#prerequisites)
+* [Data](#data)
+* [Data Summarized](#data-summarized)
+* [Data Visualized](#data-visualized)
+    * [Univariate-and-whisper plots](#univariate-plots)
+    * [Multivariate plots](#multivariate-plots)
+* [Evaluate Algorithms](#evaluate-algorithms)
+* [Make Predictions](#make-presictions)
+* [Versions](#versions)
+* [Concepts](#concepts)
+    * [Box-and-whisper plots](#box-and-whisper-plots)
+* [Seaborn](#seaborn)
+* [Reference](#reference)
+* [To Do](#to-do)
+* [Credits](#credits)
+
 ## Prerequisites
 
 Either __Python 2__ or __Python 3__ is required, as well as
@@ -127,7 +147,7 @@ We will start with __univariate__ plots and then proceed to __multivariate__ plo
 
 #### Univariate plots
 
-The [box-and-whisper plots](#box-and-whisper-plot) should look as follows:
+The [box-and-whisper plots](#box-and-whisper-plots) should look as follows:
 
 ![Box-and-whisker Plot](images/Figure_1.png)
 
@@ -135,7 +155,7 @@ The histograms should look as follows:
 
 ![Histograms](images/Figure_2.png)
 
-[Possibly the sepal-length and sepal-width foolow a __normal__ (or __gaussian__)
+[Possibly the sepal-length and sepal-width follow a __normal__ (or __gaussian__)
  distribution, although the small sample size makes it hard to be too conclusive.]
 
 #### Multivariate plots
@@ -146,6 +166,22 @@ The scatter-plot matrix should look as follows:
 
 [Note that the diagonal from top-left to bottom-right shows our histograms,
  although in a different order than we saw them before.]
+
+## Evaluate Algorithms
+
+Almost every ML paper these days has a table contrasting the accuracy
+of different algorithms, so let's follow that pattern.
+
+[I read an interview with Geoffrey Hinton where he bemoaned this fact.
+ In his opinion, what is needed is new and original thinking, rather
+ than small tweaks to well-established methods. However, is is still
+ necessary to evaluate methods based upon some criteria, so why not
+ compare against competing methods?]
+
+## Make Predictions
+
+Extrapolate a trend, make a recommendation, the goal is to make some
+sort of prediction.
 
 ## Versions
 
@@ -161,7 +197,7 @@ The scatter-plot matrix should look as follows:
 
 ## Concepts
 
-This tutorial introduced me to some new concepts, which are listed below.
+This tutorial reminded me of some concepts, which are listed below.
 
 #### Box-and-whisper plots
 
@@ -171,9 +207,23 @@ If I have understood things correctly, the green line should indicate the second
 
 Outliers (see __sepal-width__) show as circles (although in the tutorial, they show as __+__ symbols).
 
-Wikipedia had a great diagram showing Box-and-whisper plots contrasted with Probability Density Functions:
+Wikipedia has a great diagram showing Box-and-whisper plots contrasted with Probability Density Functions:
 
 ![Box-and-whisker Plots contrasted with Probability Density Functions](images/Boxplot_vs_PDF.svg)
+
+Of course, there is also [Seaborn](#seaborn) but that seems like overkill for the current exercise.
+
+## Seaborn
+
+When creating mulitivarate visualizations, colour becomes important.
+
+[Seaborn](http://seaborn.pydata.org/) offers a number of great palettes and is worth installing for this fact alone.
+
+![Native Seaborn](images/Native_Seaborn.png)
+
+[This is a pretty nice visualization, althouigh I do not care for the consolidate histograms.]
+
+For help in visualizing any installed color schemes, check out my [No More Blue](http://github.com/mramshaw/No_More_Blue) repo.
 
 ## Reference
 
@@ -185,11 +235,17 @@ box-and-whisper plots
 
     http://en.wikipedia.org/wiki/Box_plot
 
+Seaborn scatter plot
+
+    http://seaborn.pydata.org/examples/scatterplot_matrix.html
+
 ## To Do
 
 - [x] Add __Snyk.io__ vulnerability scanning
+- [ ] Fix annoying `sklearn` deprecation warnings
 - [ ] Investigate naming figures with `matplotlib.pyplot`
 - [ ] Verify code conforms to `pylint`, `pycodestyle` and `pydocstyle`
+- [ ] 12-Factor everything (validation segment size, seeds, test splits)
 - [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/) / [Dora](http://github.com/NathanEpstein/Dora)
 
 ## Credits
@@ -198,8 +254,12 @@ I followed this excellent tutorial:
 
     http://machinelearningmastery.com/machine-learning-in-python-step-by-step/
 
-While I already had experience with all of the individual steps, it was nice to see it in an end-to-end format.
+While I already had experience with all of the individual steps, it was nice to see them in an end-to-end format.
 
 Box-and-whisper plots contrasted with Probability Density Function:
 
     http://upload.wikimedia.org/wikipedia/commons/1/1a/Boxplot_vs_PDF.svg
+
+How to produce a better scatter plot from this StackOverflow question:
+
+    https://stackoverflow.com/questions/22943894/class-labels-in-pandas-scattermatrix
