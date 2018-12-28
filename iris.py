@@ -34,14 +34,26 @@ print("Rows, columns = " + str(dataset.shape))
 print
 
 # Show the first 20 rows
+print("The first 20 observations")
+print("-------------------------")
 print(dataset.head(20))
 print
 
+# Check for null (or incomplete) data
+print("Missing Data")
+print("------------")
+print(dataset.isnull().sum())
+print
+
 # Show the stats of the dataset
+print("Statistics")
+print("----------")
 print(dataset.describe())
 print
 
 # Show the class distribution
+print("Class Observations")
+print("------------------")
 print(dataset.groupby('class').size())
 print
 
@@ -96,6 +108,8 @@ models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC(gamma='scale')))
 
 # Evaluate each model in turn
+print("Goodness of Fit")
+print("---------------")
 results = []
 names = []
 for name, model in models:
@@ -106,6 +120,7 @@ for name, model in models:
     names.append(name)
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
+print
 
 """
 According to the tutorial, results should be as follows:
@@ -126,6 +141,8 @@ SVM: 0.991667 (0.025000)
 
 # ---- Make predictions ----
 
+print("Predictions")
+print("-----------")
 knn = KNeighborsClassifier()
 knn.fit(X_train, Y_train)
 predictions = knn.predict(X_validation)

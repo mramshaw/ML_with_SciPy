@@ -101,6 +101,8 @@ The __summarization__ part of the output should look as follows:
 $ python iris.py
 Rows, columns = (150, 5)
 
+The first 20 observations
+-------------------------
     sepal-length  sepal-width  petal-length  petal-width        class
 0            5.1          3.5           1.4          0.2  Iris-setosa
 1            4.9          3.0           1.4          0.2  Iris-setosa
@@ -123,6 +125,17 @@ Rows, columns = (150, 5)
 18           5.7          3.8           1.7          0.3  Iris-setosa
 19           5.1          3.8           1.5          0.3  Iris-setosa
 
+Missing Data
+------------
+sepal-length    0
+sepal-width     0
+petal-length    0
+petal-width     0
+class           0
+dtype: int64
+
+Statistics
+----------
        sepal-length  sepal-width  petal-length  petal-width
 count    150.000000   150.000000    150.000000   150.000000
 mean       5.843333     3.054000      3.758667     1.198667
@@ -133,6 +146,8 @@ min        4.300000     2.000000      1.000000     0.100000
 75%        6.400000     3.300000      5.100000     1.800000
 max        7.900000     4.400000      6.900000     2.500000
 
+Class Observations
+------------------
 class
 Iris-setosa        50
 Iris-versicolor    50
@@ -253,6 +268,7 @@ Seaborn scatter plot
 
 ## To Do
 
+- [x] Add check for missing data points
 - [x] Add __Snyk.io__ vulnerability scanning
 - [x] Fix annoying `sklearn` deprecation warnings
 - [ ] Investigate naming figures with `matplotlib.pyplot`
