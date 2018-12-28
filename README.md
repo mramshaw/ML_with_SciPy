@@ -33,13 +33,13 @@ The contents are as follows:
 * [Data](#data)
 * [Data Summarized](#data-summarized)
 * [Data Visualized](#data-visualized)
-    * [Univariate-and-whisper plots](#univariate-plots)
+    * [Univariate plots](#univariate-plots)
     * [Multivariate plots](#multivariate-plots)
 * [Evaluate Algorithms](#evaluate-algorithms)
-* [Make Predictions](#make-presictions)
+* [Make Predictions](#make-predictions)
 * [Versions](#versions)
 * [Concepts](#concepts)
-    * [Box-and-whisper plots](#box-and-whisper-plots)
+    * [Box-and-whisker plots](#box-and-whisker-plots)
 * [Seaborn](#seaborn)
 * [Reference](#reference)
 * [To Do](#to-do)
@@ -148,7 +148,7 @@ We will start with __univariate__ plots and then proceed to __multivariate__ plo
 
 #### Univariate plots
 
-The [box-and-whisper plots](#box-and-whisper-plots) should look as follows:
+The [box-and-whisker plots](#box-and-whisker-plots) should look as follows:
 
 ![Box-and-whisker Plot](images/Figure_1.png)
 
@@ -178,7 +178,7 @@ differently for our various Iris categories.
 This corresponds with the results obtained in my
 [Iris](http://github.com/mramshaw/Intro-to-ML/tree/master/Iris) exercise:
 
-![Native Seaborn](images/IrisTree.dot.svg)
+![Iris decision tree](images/IrisTree.dot.svg)
 
 ## Evaluate Algorithms
 
@@ -213,7 +213,7 @@ sort of prediction.
 
 This tutorial reminded me of some concepts, which are listed below.
 
-#### Box-and-whisper plots
+#### Box-and-whisker plots
 
 These are a type of __univariate__ plot, much like a __Probability Density Function__.
 
@@ -221,7 +221,7 @@ If I have understood things correctly, the green line should indicate the second
 
 Outliers (see __sepal-width__) show as circles (although in the tutorial, they show as __+__ symbols).
 
-Wikipedia has a great diagram showing Box-and-whisper plots contrasted with Probability Density Functions:
+Wikipedia has a great diagram showing Box-and-whisker plots contrasted with Probability Density Functions:
 
 ![Box-and-whisker Plots contrasted with Probability Density Functions](images/Boxplot_vs_PDF.svg)
 
@@ -243,7 +243,7 @@ read_csv
 
     http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html
 
-box-and-whisper plots
+box-and-whisker plots
 
     http://en.wikipedia.org/wiki/Box_plot
 
@@ -256,9 +256,10 @@ Seaborn scatter plot
 - [x] Add __Snyk.io__ vulnerability scanning
 - [ ] Fix annoying `sklearn` deprecation warnings
 - [ ] Investigate naming figures with `matplotlib.pyplot`
+- [x] Add notes on using `seaborn` for multivariate vasualizations
 - [ ] Verify code conforms to `pylint`, `pycodestyle` and `pydocstyle`
 - [ ] 12-Factor everything (validation segment size, seeds, test splits)
-- [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/) / [Dora](http://github.com/NathanEpstein/Dora)
+- [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/) and/or [Dora](http://github.com/NathanEpstein/Dora)
 
 ## Credits
 
@@ -268,7 +269,7 @@ I followed this excellent tutorial:
 
 While I already had experience with all of the individual steps, it was nice to see them in an end-to-end format.
 
-Box-and-whisper plots contrasted with Probability Density Function:
+Box-and-whisker plots contrasted with Probability Density Function:
 
     http://upload.wikimedia.org/wikipedia/commons/1/1a/Boxplot_vs_PDF.svg
 
