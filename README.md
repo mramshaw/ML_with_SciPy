@@ -254,9 +254,9 @@ Seaborn scatter plot
 ## To Do
 
 - [x] Add __Snyk.io__ vulnerability scanning
-- [ ] Fix annoying `sklearn` deprecation warnings
+- [x] Fix annoying `sklearn` deprecation warnings
 - [ ] Investigate naming figures with `matplotlib.pyplot`
-- [x] Add notes on using `seaborn` for multivariate vasualizations
+- [x] Add notes on using `seaborn` for multivariate visualizations
 - [ ] Verify code conforms to `pylint`, `pycodestyle` and `pydocstyle`
 - [ ] 12-Factor everything (validation segment size, seeds, test splits)
 - [ ] Investigate [populating missing data](http://machinelearningmastery.com/handle-missing-data-python/) and/or [Dora](http://github.com/NathanEpstein/Dora)

@@ -63,7 +63,7 @@ scatter_matrix(dataset)
 plt.show()
 
 # Plot 'seaborn' scatter-plot matrix, broken down by class
-sb.pairplot(dataset, hue = 'class', diag_kind = "kde", kind = "scatter")
+sb.pairplot(dataset, hue='class', diag_kind='kde', kind='scatter')
 plt.show()
 
 # ---- Evaluate algorithms ----
@@ -82,12 +82,12 @@ scoring = 'accuracy'
 
 # Spot Check Algorithms
 models = []
-models.append(('LR', LogisticRegression()))
+models.append(('LR', LogisticRegression(solver='liblinear', multi_class='auto')))
 models.append(('LDA', LinearDiscriminantAnalysis()))
 models.append(('KNN', KNeighborsClassifier()))
 models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
-models.append(('SVM', SVC()))
+models.append(('SVM', SVC(gamma='scale')))
 
 # Evaluate each model in turn
 results = []
@@ -110,5 +110,8 @@ CART: 0.975000 (0.038188)
 NB: 0.975000 (0.053359)
 SVM: 0.981667 (0.025000)
 
-[Along with some deprecation warnings, these are what I got.]
+Along with some deprecation warnings, only SVM differed.
+
+I got:
+SVM: 0.991667 (0.025000)
 """
