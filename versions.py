@@ -23,3 +23,7 @@ print('pandas: {}'.format(pandas.__version__))
 # scikit-learn
 import sklearn
 print('sklearn: {}'.format(sklearn.__version__))
+
+# seaborn
+import seaborn
+print('seaborn: {}'.format(seaborn.__version__))

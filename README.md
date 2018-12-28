@@ -15,8 +15,8 @@ on what actually happens in a simple project.
 
 The sequence of events is as follows:
 
-1. Install the Python and SciPy platform
-2. Load the dataset
+1. Install Python and the SciPy platform
+2. Load the Iris dataset
 3. Summarize the dataset
 4. Visualize the dataset
 5. Evaluate some algorithms
@@ -68,6 +68,7 @@ numpy: 1.14.0
 matplotlib: 2.0.2
 pandas: 0.20.3
 sklearn: 0.20.0
+seaborn: 0.9.0
 $
 ```
 
@@ -167,6 +168,18 @@ The scatter-plot matrix should look as follows:
 [Note that the diagonal from top-left to bottom-right shows our histograms,
  although in a different order than we saw them before.]
 
+We can obtain even more useful results using [Seaborn](#seaborn):
+
+![Seaborn Scatter-plot](images/Seaborn_Scatterplot.png)
+
+Here we can see that `petal-length` and `petal-width` are distributed
+differently for our various Iris categories.
+
+This corresponds with the results obtained in my
+[Iris](http://github.com/mramshaw/Intro-to-ML/tree/master/Iris) exercise:
+
+![Native Seaborn](images/IrisTree.dot.svg)
+
 ## Evaluate Algorithms
 
 Almost every ML paper these days has a table contrasting the accuracy
@@ -174,7 +187,7 @@ of different algorithms, so let's follow that pattern.
 
 [I read an interview with Geoffrey Hinton where he bemoaned this fact.
  In his opinion, what is needed is new and original thinking, rather
- than small tweaks to well-established methods. However, is is still
+ than small tweaks to well-established methods. However, it is still
  necessary to evaluate methods based upon some criteria, so why not
  compare against competing methods?]
 
@@ -193,6 +206,7 @@ sort of prediction.
 * numpy __1.14.0__
 * pandas __0.20.3__
 * scipy __0.17.0__
+* seaborn __0.9.0__
 * sklearn __0.20.0__
 
 ## Concepts
@@ -215,13 +229,11 @@ Of course, there is also [Seaborn](#seaborn) but that seems like overkill for th
 
 ## Seaborn
 
-When creating mulitivarate visualizations, colour becomes important.
+When creating multivariate visualizations, colour becomes important.
 
 [Seaborn](http://seaborn.pydata.org/) offers a number of great palettes and is worth installing for this fact alone.
 
-![Native Seaborn](images/Native_Seaborn.png)
-
-[This is a pretty nice visualization, althouigh I do not care for the consolidate histograms.]
+Of course, it is also possible to do something much like this with `matplotlib` but `seaborn` makes it simpler.
 
 For help in visualizing any installed color schemes, check out my [No More Blue](http://github.com/mramshaw/No_More_Blue) repo.
 
@@ -262,4 +274,4 @@ Box-and-whisper plots contrasted with Probability Density Function:
 
 How to produce a better scatter plot from this StackOverflow question:
 
-    https://stackoverflow.com/questions/22943894/class-labels-in-pandas-scattermatrix
+    http://stackoverflow.com/questions/22943894/class-labels-in-pandas-scattermatrix
