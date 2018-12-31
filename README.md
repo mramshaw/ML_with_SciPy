@@ -200,11 +200,12 @@ This corresponds with the results obtained in my
 Almost every ML paper these days has a table contrasting the accuracy
 of different algorithms, so let's follow that pattern.
 
-[I read an interview with Geoffrey Hinton where he bemoaned this fact.
- In his opinion, what is needed is new and original thinking, rather
- than small tweaks to well-established methods. However, it is still
- necessary to evaluate methods based upon some criteria, so why not
- compare against competing methods?]
+[I read an interview with
+[Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton)
+ where he bemoaned this fact. In his opinion, what is really needed
+ is new and original thinking, rather than small tweaks to well-established
+ methods. However, it is still necessary to evaluate methods based upon
+ some criteria, so why not compare against competing methods?]
 
 ## Make Predictions
 
@@ -233,14 +234,13 @@ This tutorial reminded me of some concepts, which are listed below.
 These are a type of __univariate__ plot, much like a __Probability Density Function__.
 
 If I have understood things correctly, the green line should indicate the second quartile (the __median__).
+Of course, in the tutorial, the corresponding line was red (rather than green as mine shows).
 
 Outliers (see __sepal-width__) show as circles (although in the tutorial, they show as __+__ symbols).
 
 Wikipedia has a great diagram showing Box-and-whisker plots contrasted with Probability Density Functions:
 
 ![Box-and-whisker Plots contrasted with Probability Density Functions](images/Boxplot_vs_PDF.svg)
-
-Of course, there is also [Seaborn](#seaborn) but that seems like overkill for the current exercise.
 
 ## Seaborn
 
