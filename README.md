@@ -93,6 +93,9 @@ the [author's published version](http://raw.githubusercontent.com/jbrownlee/Data
 As this is a well-known data set, we will not need to do any data cleaning
 (which would generally be a considerable time-sink in any ML exercise).
 
+Likewise, we will check for any missing data points (there aren't any, but
+it is probably always a good practice to check for data completeness).
+
 ## Data Summarized
 
 The __summarization__ part of the output should look as follows:
