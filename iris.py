@@ -21,13 +21,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
-# ---- Load the iris dataset ----
+# 2) ---- Load the iris dataset ----
 
 local_file = "iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(local_file, names=names)
 
-# ---- Summarize the iris dataset ----
+# 3) ---- Summarize the iris dataset ----
 
 # Show the shape (rows & columns) of the dataset
 print("Rows, columns = " + str(dataset.shape))
@@ -57,9 +57,9 @@ print("------------------")
 print(dataset.groupby('class').size())
 print
 
-# ---- Visualize the iris dataset ----
+# 4) ---- Visualize the iris dataset ----
 
-# 1) - Univariate plots
+# 4a) - Univariate plots
 
 # Plot box-and-whisker (univariate) plots
 dataset.plot(kind='box', subplots=True, layout=(2, 2),
@@ -70,7 +70,7 @@ plt.show()
 dataset.hist()
 plt.show()
 
-# 2) - Multivariate plots
+# 4b) - Multivariate plots
 
 # Plot scatter-plot matrix
 scatter_matrix(dataset)
@@ -80,7 +80,7 @@ plt.show()
 sb.pairplot(dataset, hue='class', diag_kind='kde', kind='scatter')
 plt.show()
 
-# ---- Evaluate algorithms ----
+# 5) ---- Evaluate algorithms ----
 
 # Segment our dataset into training and validation sets
 array = dataset.values
@@ -139,7 +139,17 @@ CART: 0.966667 (0.040825)
 SVM: 0.991667 (0.025000)
 """
 
-# ---- Make predictions ----
+# Compare Algorithms
+fig = plt.figure()
+fig.suptitle('Algorithm Comparison')
+ax = fig.add_subplot(111)
+plt.boxplot(results)
+ax.set_xticklabels(names)
+plt.show()
+
+# 6) ---- Make predictions ----
+
+# KNN was the most accurate, so we will use that
 
 print("Predictions")
 print("-----------")

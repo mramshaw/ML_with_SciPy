@@ -200,17 +200,75 @@ This corresponds with the results obtained in my
 Almost every ML paper these days has a table contrasting the accuracy
 of different algorithms, so let's follow that pattern.
 
-[I read an interview with
+[I listened to an interview with
 [Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton)
  where he bemoaned this fact. In his opinion, what is really needed
  is new and original thinking, rather than small tweaks to well-established
  methods. However, it is still necessary to evaluate methods based upon
  some criteria, so why not compare against competing methods?]
 
+According to the tutorial, the results should have been as follows:
+
+```
+LR: 0.966667 (0.040825)
+LDA: 0.975000 (0.038188)
+KNN: 0.983333 (0.033333)
+CART: 0.975000 (0.038188)
+NB: 0.975000 (0.053359)
+SVM: 0.981667 (0.025000)
+```
+
+Along with some deprecation warnings, only CART and SVM differed.
+
+I got:
+
+```
+CART: 0.966667 (0.040825)
+SVM: 0.991667 (0.025000)
+```
+
+The final comparison looked as follows:
+
+![Algorithm comparison](images/Algorithm_comparison.png)
+
+[This diagram looks somewhat different than in the tutorial, but the
+ overall results seem to be about the same. Note that the KNN, NB and
+ SVM boxes are squashed up at 100 percent accuracy.]
+
 ## Make Predictions
 
 Extrapolate a trend, make a recommendation, the goal is to make some
 sort of prediction.
+
+According to the tutorial, results should have been as follows:
+
+```
+0.9
+
+[[ 7  0  0]
+ [ 0 11  1]
+ [ 0  2  9]]
+
+             precision    recall  f1-score   support
+
+Iris-setosa       1.00      1.00      1.00         7
+Iris-versicolor   0.85      0.92      0.88        12
+Iris-virginica    0.90      0.82      0.86        11
+
+avg / total       0.90      0.90      0.90        30
+```
+
+The first __0.9__ indicates 90 percent accuracy.
+
+Instead of the final "avg / total" line I got the following:
+
+```
+      micro avg       0.90      0.90      0.90        30
+      macro avg       0.92      0.91      0.91        30
+   weighted avg       0.90      0.90      0.90        30
+```
+
+[Seems to be the same apart from the "macro avg".]
 
 ## Versions
 
